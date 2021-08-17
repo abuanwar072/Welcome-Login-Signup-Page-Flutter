@@ -7,6 +7,8 @@ import 'package:flutter_auth/constants.dart';
 import 'package:flutter_svg/svg.dart';
 
 class Body extends StatelessWidget {
+  int height;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -17,8 +19,7 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              "WELCOME TO EDU",
-              style: TextStyle(fontWeight: FontWeight.bold),
+              "Welcome to FHCP Rewards",
             ),
             SizedBox(height: size.height * 0.05),
             SvgPicture.asset(
@@ -27,7 +28,7 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: size.height * 0.05),
             RoundedButton(
-              text: "LOGIN",
+              text: "LOGIN WITH MEMBER PORTAL",
               press: () {
                 Navigator.push(
                   context,
@@ -40,9 +41,24 @@ class Body extends StatelessWidget {
               },
             ),
             RoundedButton(
-              text: "SIGN UP",
+              text: "SIGN UP FOR MEMBER PORTAL",
               color: kPrimaryLightColor,
-              textColor: Colors.black,
+              textColor: Colors.white,
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignUpScreen();
+                    },
+                  ),
+                );
+              },
+            ),
+            RoundedButton(
+              text: "USE APP AS GUEST",
+              color: kPrimaryLightColor,
+              textColor: Colors.white,
               press: () {
                 Navigator.push(
                   context,
