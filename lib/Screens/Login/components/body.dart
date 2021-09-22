@@ -21,24 +21,24 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              "LOGIN",
+              "Giriş",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             SizedBox(height: size.height * 0.03),
             SvgPicture.asset(
-              "assets/icons/login.svg",
+              "assets/icons/doktor.svg",
               height: size.height * 0.35,
             ),
             SizedBox(height: size.height * 0.03),
             RoundedInputField(
-              hintText: "Your Email",
+              hintText: "Email",
               onChanged: (value) {},
             ),
             RoundedPasswordField(
               onChanged: (value) {},
             ),
             RoundedButton(
-              text: "LOGIN",
+              text: "Giriş",
               press: () {},
             ),
             SizedBox(height: size.height * 0.03),

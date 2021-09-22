@@ -17,17 +17,19 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              "WELCOME TO EDU",
+              "",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: size.height * 0.05),
+            SizedBox(height: size.height * 0.03),
             SvgPicture.asset(
-              "assets/icons/chat.svg",
-              height: size.height * 0.45,
+              "assets/icons/ana_giris_app.svg",
+              height: size.height * 0.5,
             ),
-            SizedBox(height: size.height * 0.05),
+            SizedBox(height: size.height * 0.001),
             RoundedButton(
-              text: "LOGIN",
+              text: "Giriş Yap",
+              color: Colors.black,
+              textColor: Colors.grey.shade200,
               press: () {
                 Navigator.push(
                   context,
@@ -40,8 +42,8 @@ class Body extends StatelessWidget {
               },
             ),
             RoundedButton(
-              text: "SIGN UP",
-              color: kPrimaryLightColor,
+              text: "Kayıt Ol",
+              color: Colors.grey.shade200,
               textColor: Colors.black,
               press: () {
                 Navigator.push(
