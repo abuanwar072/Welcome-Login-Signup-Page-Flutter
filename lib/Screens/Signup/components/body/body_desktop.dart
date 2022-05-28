@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_auth/Screens/Login/components/background.dart';
-import 'package:flutter_auth/Screens/Signup/signup_screen.dart';
+import 'package:flutter_auth/Screens/Login/login_screen.dart';
+import 'package:flutter_auth/Screens/Signup/components/background.dart';
+import 'package:flutter_auth/Screens/Signup/components/or_divider.dart';
+import 'package:flutter_auth/Screens/Signup/components/social_icon.dart';
 import 'package:flutter_auth/components/already_have_an_account_acheck.dart';
 import 'package:flutter_auth/components/rounded_button.dart';
 import 'package:flutter_auth/components/rounded_input_field.dart';
@@ -17,7 +19,9 @@ class BodyDesktop extends StatelessWidget {
     return Background(
       child: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: size.width * 0.1,
+          horizontal: Responsive.isDesktop(context)
+              ? size.width * 0.12
+              : size.width * 0.07,
         ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -25,12 +29,9 @@ class BodyDesktop extends StatelessWidget {
             Expanded(
               flex: Responsive.isDesktop(context) ? 2 : 1,
               child: SvgPicture.asset(
-                "assets/icons/login.svg",
-                height: size.height * 0.45,
+                "assets/icons/signup.svg",
+                height: size.height * 0.5,
               ),
-            ),
-            SizedBox(
-              width: size.height * 0.1,
             ),
             Expanded(
               child: Column(
@@ -44,26 +45,45 @@ class BodyDesktop extends StatelessWidget {
                     onChanged: (value) {},
                   ),
                   RoundedButton(
-                    text: "LOGIN",
+                    text: "SIGNUP",
                     press: () {},
                     height: size.height * 0.07,
                   ),
                   SizedBox(height: size.height * 0.03),
                   AlreadyHaveAnAccountCheck(
+                    login: false,
                     press: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return const SignUpScreen();
+                            return const LoginScreen();
                           },
                         ),
                       );
                     },
                   ),
+                  const OrDivider(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      SocalIcon(
+                        iconSrc: "assets/icons/facebook.svg",
+                        press: () {},
+                      ),
+                      SocalIcon(
+                        iconSrc: "assets/icons/twitter.svg",
+                        press: () {},
+                      ),
+                      SocalIcon(
+                        iconSrc: "assets/icons/google-plus.svg",
+                        press: () {},
+                      ),
+                    ],
+                  )
                 ],
               ),
-            ),
+            )
           ],
         ),
       ),
