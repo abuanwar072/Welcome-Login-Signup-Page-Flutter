@@ -6,7 +6,9 @@ import 'package:flutter_auth/components/rounded_button.dart';
 import 'package:flutter_auth/constants.dart';
 import 'package:flutter_svg/svg.dart';
 
-class Body extends StatelessWidget {
+class BodyMobile extends StatelessWidget {
+  const BodyMobile({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -16,7 +18,7 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            const Text(
               "WELCOME TO EDU",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
@@ -33,7 +35,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return LoginScreen();
+                      return const LoginScreen();
                     },
                   ),
                 );
@@ -48,7 +50,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return SignUpScreen();
+                      return const SignUpScreen();
                     },
                   ),
                 );

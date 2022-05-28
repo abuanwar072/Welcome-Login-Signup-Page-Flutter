@@ -9,7 +9,7 @@ import 'package:flutter_svg/svg.dart';
 
 class Body extends StatelessWidget {
   const Body({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -20,7 +20,7 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            const Text(
               "LOGIN",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
@@ -48,7 +48,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return SignUpScreen();
+                      return const SignUpScreen();
                     },
                   ),
                 );
