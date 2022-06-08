@@ -14,6 +14,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            elevation: 0,
+            primary: kPrimaryColor,
+            shape: StadiumBorder(),
+            maximumSize: Size(double.infinity, 48),
+            minimumSize: Size(double.infinity, 48),
+          ),
+        ),
       ),
       home: WelcomeScreen(),
     );
