@@ -3,10 +3,10 @@ import 'package:flutter_auth/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SocalIcon extends StatelessWidget {
-  final String iconSrc;
-  final Function press;
+  final String? iconSrc;
+  final Function? press;
   const SocalIcon({
-    Key key,
+    Key? key,
     this.iconSrc,
     this.press,
   }) : super(key: key);
@@ -14,7 +14,7 @@ class SocalIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: press,
+      onTap: press as void Function()?,
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 10),
         padding: EdgeInsets.all(20),
@@ -26,7 +26,7 @@ class SocalIcon extends StatelessWidget {
           shape: BoxShape.circle,
         ),
         child: SvgPicture.asset(
-          iconSrc,
+          iconSrc!,
           height: 20,
           width: 20,
         ),

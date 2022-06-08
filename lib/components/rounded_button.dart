@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth/constants.dart';
 
 class RoundedButton extends StatelessWidget {
-  final String text;
-  final Function press;
+  final String? text;
+  final Function? press;
   final Color color, textColor;
   const RoundedButton({
-    Key key,
+    Key? key,
     this.text,
     this.press,
     this.color = kPrimaryColor,
@@ -32,10 +32,10 @@ class RoundedButton extends StatelessWidget {
   Widget newElevatedButton() {
     return ElevatedButton(
       child: Text(
-        text,
+        text!,
         style: TextStyle(color: textColor),
       ),
-      onPressed: press,
+      onPressed: press as void Function()?,
       style: ElevatedButton.styleFrom(
           primary: color,
           padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
