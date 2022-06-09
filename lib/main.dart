@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/Welcome/welcome_screen.dart';
 import 'package:flutter_auth/constants.dart';
+import 'package:flutter_auth/responsive.dart';
 
 void main() => runApp(MyApp());
 
@@ -19,8 +20,8 @@ class MyApp extends StatelessWidget {
               elevation: 0,
               primary: kPrimaryColor,
               shape: StadiumBorder(),
-              maximumSize: Size(double.infinity, 48),
-              minimumSize: Size(double.infinity, 48),
+              maximumSize: Size(double.infinity, 56),
+              minimumSize: Size(double.infinity, 56),
             ),
           ),
           inputDecorationTheme: InputDecorationTheme(
