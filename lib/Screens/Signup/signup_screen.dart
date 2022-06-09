@@ -1,11 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_auth/Screens/Signup/components/body.dart';
+import '../../components/background.dart';
+import 'components/sign_up_top_image.dart';
+import 'components/signup_form.dart';
+import 'components/socal_sign_up.dart';
 
 class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Body(),
+    return Background(
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            SignUpScreenTopImage(),
+            Row(
+              children: [
+                const Spacer(),
+                Expanded(
+                  flex: 8,
+                  child: SignUpForm(),
+                ),
+                const Spacer(),
+              ],
+            ),
+            SocalSignUp()
+          ],
+        ),
+      ),
     );
+    ;
   }
 }
