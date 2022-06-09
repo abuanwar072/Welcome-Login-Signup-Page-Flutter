@@ -13,12 +13,11 @@ class Background extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
         width: double.infinity,
-        height: size.height,
+        height: MediaQuery.of(context).size.height,
         child: Stack(
           alignment: Alignment.center,
           children: <Widget>[
@@ -30,12 +29,12 @@ class Background extends StatelessWidget {
                 width: 120,
               ),
             ),
-            Positioned(
-              bottom: 0,
-              right: 0,
-              child: Image.asset(bottomImage, width: 120),
-            ),
-            child,
+            // Positioned(
+            //   bottom: 0,
+            //   right: 0,
+            //   child: Image.asset(bottomImage, width: 120),
+            // ),
+            SafeArea(child: child),
           ],
         ),
       ),
