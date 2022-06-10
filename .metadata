@@ -15,7 +15,11 @@ migration:
     - platform: root
       create_revision: fb57da5f945d02ef4f98dfd9409a72b7cce74268
       base_revision: fb57da5f945d02ef4f98dfd9409a72b7cce74268
+<<<<<<< HEAD
     - platform: windows
+=======
+    - platform: web
+>>>>>>> responsive
       create_revision: fb57da5f945d02ef4f98dfd9409a72b7cce74268
       base_revision: fb57da5f945d02ef4f98dfd9409a72b7cce74268
 

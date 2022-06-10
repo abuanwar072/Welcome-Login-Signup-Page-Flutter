@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
     "name": "welcome_login_signup_page_flutter",
     "short_name": "welcome_login_signup_page_flutter",
+=======
+    "name": "flutter_auth",
+    "short_name": "flutter_auth",
+>>>>>>> responsive
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
