@@ -1,23 +1,15 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'components/body/body.dart';
-=======
 
 import '../../components/background.dart';
 import '../../responsive.dart';
 import 'components/login_signup_btn.dart';
 import 'components/welcome_image.dart';
->>>>>>> responsive
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
-    return const Scaffold(
-      body: Body(),
-=======
     return Background(
       child: SingleChildScrollView(
         child: SafeArea(
@@ -71,7 +63,6 @@ class MobileWelcomeScreen extends StatelessWidget {
           ],
         ),
       ],
->>>>>>> responsive
     );
   }
 }

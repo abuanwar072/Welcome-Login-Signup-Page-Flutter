@@ -3,21 +3,12 @@ import 'package:flutter_auth/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SocalIcon extends StatelessWidget {
-<<<<<<< HEAD
-  final String iconSrc;
-  final Function() press;
-  const SocalIcon({
-    Key? key,
-    required this.iconSrc,
-    required this.press,
-=======
   final String? iconSrc;
   final Function? press;
   const SocalIcon({
     Key? key,
     this.iconSrc,
     this.press,
->>>>>>> responsive
   }) : super(key: key);
 
   @override
