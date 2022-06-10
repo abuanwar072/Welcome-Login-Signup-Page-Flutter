@@ -12,7 +12,7 @@ class SocalSignUp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        OrDivider(),
+        const OrDivider(),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[

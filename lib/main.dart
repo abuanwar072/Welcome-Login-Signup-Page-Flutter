@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/Welcome/welcome_screen.dart';
 import 'package:flutter_auth/constants.dart';
-import 'package:flutter_auth/responsive.dart';
 
 void main() => runApp(const MyApp());
 
@@ -21,12 +20,12 @@ class MyApp extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               elevation: 0,
               primary: kPrimaryColor,
-              shape: StadiumBorder(),
-              maximumSize: Size(double.infinity, 56),
-              minimumSize: Size(double.infinity, 56),
+              shape: const StadiumBorder(),
+              maximumSize: const Size(double.infinity, 56),
+              minimumSize: const Size(double.infinity, 56),
             ),
           ),
-          inputDecorationTheme: InputDecorationTheme(
+          inputDecorationTheme: const InputDecorationTheme(
             filled: true,
             fillColor: kPrimaryLightColor,
             iconColor: kPrimaryColor,
@@ -38,7 +37,7 @@ class MyApp extends StatelessWidget {
               borderSide: BorderSide.none,
             ),
           )),
-      home: WelcomeScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }
