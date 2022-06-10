@@ -1,6 +1,8 @@
 # Responsive Welcome, Login, and Sign up page - Flutter UI
 
-## [Watch it on YouTube](https://youtu.be/8gJ_WRmxyW0)
+### [Live Preview 🔴 ](https://abuanwar072.github.io/Welcome-Login-Signup-Page-Flutter/#/)
+
+### [Watch it on YouTube](https://youtu.be/8gJ_WRmxyW0)
 
 **Packages we are using:**
 
@@ -12,5 +14,5 @@ We design 3 responsive screens first one is a welcome screen the user opens your
 
 ### Auth UI
 
-![App UI](/UI.png)
 ![Preview UI](/preview.gif)
+![App UI](/UI.png)
