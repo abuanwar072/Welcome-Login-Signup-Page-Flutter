@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_auth/constants.dart';
 import 'package:flutter_auth/responsive.dart';
 import '../../components/background.dart';
 import 'components/sign_up_top_image.dart';
@@ -17,16 +18,18 @@ class SignUpScreen extends StatelessWidget {
           desktop: Row(
             children: [
               const Expanded(
-                child:  SignUpScreenTopImage(),
+                child: SignUpScreenTopImage(),
               ),
               Expanded(
-                child: Row(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     SizedBox(
                       width: 450,
                       child: SignUpForm(),
                     ),
+                    SizedBox(height: defaultPadding / 2),
+                    SocalSignUp()
                   ],
                 ),
               )
@@ -35,7 +38,6 @@ class SignUpScreen extends StatelessWidget {
         ),
       ),
     );
-    
   }
 }
 
