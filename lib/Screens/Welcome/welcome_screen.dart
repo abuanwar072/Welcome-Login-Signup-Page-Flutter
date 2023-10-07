@@ -4,6 +4,7 @@ import '../../components/background.dart';
 import '../../responsive.dart';
 import 'components/login_signup_btn.dart';
 import 'components/welcome_image.dart';
+import 'components/welcome_image.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class WelcomeScreen extends StatelessWidget {
             desktop: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                const Expanded(
+                Expanded(
                   child: WelcomeImage(),
                 ),
                 Expanded(
@@ -26,43 +27,32 @@ class WelcomeScreen extends StatelessWidget {
                     children: const [
                       SizedBox(
                         width: 450,
-                        child: LoginAndSignupBtn(),
+                        child: LoginAndSignUpBtn(),
                       ),
                     ],
                   ),
                 ),
               ],
             ),
-            mobile: const MobileWelcomeScreen(),
+            mobile: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                WelcomeImage(),
+                Row(
+                  children: [
+                    Spacer(),
+                    Expanded(
+                      flex: 8,
+                      child: LoginAndSignUpBtn(),
+                    ),
+                    const Spacer(),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
-    );
-  }
-}
-
-class MobileWelcomeScreen extends StatelessWidget {
-  const MobileWelcomeScreen({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        const WelcomeImage(),
-        Row(
-          children: const [
-            Spacer(),
-            Expanded(
-              flex: 8,
-              child: LoginAndSignupBtn(),
-            ),
-            Spacer(),
-          ],
-        ),
-      ],
     );
   }
 }
